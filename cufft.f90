@@ -40,12 +40,12 @@ module cufft
 
   ! CUFFT Transform Types
   enum, bind(C)
-    enumerator :: CUFFT_R2C = z'2a' ! Real to Complex (interleaved)
-    enumerator :: CUFFT_C2R = z'2c' ! Complex (interleaved) to Real
-    enumerator :: CUFFT_C2C = z'29' ! Complex to Complex, interleaved
-    enumerator :: CUFFT_D2Z = z'6a' ! Double to Double-Complex
-    enumerator :: CUFFT_Z2D = z'6c' ! Double-Complex to Double
-    enumerator :: CUFFT_Z2Z = z'69' ! Double-Complex to Double-Complex
+    enumerator :: CUFFT_R2C = int(z'2a') ! Real to Complex (interleaved)
+    enumerator :: CUFFT_C2R = int(z'2c') ! Complex (interleaved) to Real
+    enumerator :: CUFFT_C2C = int(z'29') ! Complex to Complex, interleaved
+    enumerator :: CUFFT_D2Z = int(z'6a') ! Double to Double-Complex
+    enumerator :: CUFFT_Z2D = int(z'6c') ! Double-Complex to Double
+    enumerator :: CUFFT_Z2Z = int(z'69') ! Double-Complex to Double-Complex
   end enum
 
   ! CUFFT Data Layouts
