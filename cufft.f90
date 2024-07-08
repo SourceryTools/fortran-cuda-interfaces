@@ -291,9 +291,9 @@ module cufft
      integer(c_int) function cufftExecZ2D (plan, idata, odata) &
          bind (c, name="cufftExecZ2D")
        import
-       complex(c_float), dimension(*) :: idata
+       complex(c_double), dimension(*) :: idata
        integer(c_int), value :: plan
-       real(c_float), dimension(*) :: odata
+       real(c_double), dimension(*) :: odata
      end function cufftExecZ2D
 
   end interface
